@@ -1,11 +1,16 @@
 print('Programs:')
-progs = ['Conv', 'Porto', 'Lam']
-print(progs)
+programs = ['Conv', 'Porto', 'Lam']
+print(programs, ' exit')
 
 
 while True:
 
-    if input() == 'Conv':
+    keyword = input()
+
+    if keyword == 'exit':
+        break
+
+    elif keyword == 'Conv':
         euro = 7.43
         minFee = 0.02
         print()
@@ -19,6 +24,8 @@ while True:
             dkk = input()
             if dkk == 'back':
                 break
+                print('Programs:')
+                print(programs, ' exit')
             else:
                 print()
                 print('That is:')
@@ -31,26 +38,32 @@ while True:
                 else:
                     print('0.5')
                     print()
-    elif input() == 'Porto':
+
+    elif keyword == 'Porto':
+        print()
         print('Porto program started')
         while True:
-            print()
             print('this program will calculate the price it will cost you to send a letter from denmark to another country, also know as "A Prioritare"')
             print()
             print('input weight in grams')
             grams = input()
             print()
-            if grams >= 100:
-                print('you will pay:')
-                print('29.00')
-            if grams >= 250:
-                print('you will pay:')
-                print('58.00')
-            if grams >= 2000:
-                print('you will pay:')
-                print('87.00')
+            if grams == 'exit':
+                break
+                print('Programs:')
+                print(programs, ' exit')
+            else:
+                if grams >= 100:
+                    print('you will pay:')
+                    print('29.00')
+                elif grams >= 250:
+                    print('you will pay:')
+                    print('58.00')
+                elif grams >= 2000:
+                    print('you will pay:')
+                    print('87.00')
 
-    elif input() == 'LAM':
+    elif keyword == 'LAM':
         print('"Largest And Smallest" number detector started')
         while True:
             print('poop')
