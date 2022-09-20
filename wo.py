@@ -42,9 +42,9 @@ while True:
     elif keyword == 'Porto':
         print()
         print('Porto program started')
+        print('this program will calculate the price it will cost you to send a letter from denmark to another country, also know as "A Prioritare"')
+        print()
         while True:
-            print('this program will calculate the price it will cost you to send a letter from denmark to another country, also know as "A Prioritare"')
-            print()
             print('input weight in grams')
             grams = input()
             print()
@@ -53,17 +53,17 @@ while True:
                 print('Programs:')
                 print(programs, ' exit')
             else:
-                if grams >= 100:
+                if grams >= '100':
                     print('you will pay:')
                     print('29.00')
-                elif grams >= 250:
+                elif grams >= '250':
                     print('you will pay:')
                     print('58.00')
-                elif grams >= 2000:
+                elif grams >= '2000':
                     print('you will pay:')
                     print('87.00')
 
     elif keyword == 'LAM':
         print('"Largest And Smallest" number detector started')
         while True:
-            print('poop')
+            print('Input numbers')
