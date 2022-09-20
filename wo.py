@@ -1,16 +1,17 @@
-print('Programs:')
-programs = ['Conv', 'Porto', 'Lam']
-print(programs, ' exit')
-
-
 while True:
+    print()
+    print('Programs:')
+    programs = ['Conv', 'Porto', 'Las']
+    print(str(programs), ', exit')
+    print()
+    print('input the title of the program youd like to use or type exit.')
 
     keyword = input()
 
     if keyword == 'exit':
         break
 
-    elif keyword == 'Conv':
+    elif keyword in ['Conv', 'conv']:
         euro = 7.43
         minFee = 0.02
         print()
@@ -19,51 +20,86 @@ while True:
         print('there is a 2% fee for converting, at a minimum of 0.5 euro.')
         print('if the fee is less than 0.5 eur, we will not convert your currency.')
         print()
+        print('input DKK:')
         while True:
-            print('input DKK')
             dkk = input()
             if dkk == 'back':
-                break
+                print()
                 print('Programs:')
                 print(programs, ' exit')
+                break
             else:
                 print()
                 print('That is:')
                 dkk = float(dkk)
-                print(str(dkk/euro), 'euro')
+                print(dkk/euro, 'euro')
                 print('Conversion fee:')
                 if dkk/euro*minFee > 0.5:
                     print(dkk/euro*minFee)
-                    print()
                 else:
                     print('0.5')
-                    print()
+            print('input another amount to convert, or type back.')
 
-    elif keyword == 'Porto':
+    elif keyword in ['Porto', 'porto']:
         print()
         print('Porto program started')
         print('this program will calculate the price it will cost you to send a letter from denmark to another country, also know as "A Prioritare"')
         print()
+        print('input weight in grams')
         while True:
-            print('input weight in grams')
             grams = input()
             print()
-            if grams == 'exit':
-                break
+            if grams == 'back':
+                print()
                 print('Programs:')
                 print(programs, ' exit')
+                break
             else:
-                if grams >= '100':
+                grams = float(grams)
+                if grams <= 100:
                     print('you will pay:')
                     print('29.00')
-                elif grams >= '250':
+                elif grams <= 250:
                     print('you will pay:')
                     print('58.00')
-                elif grams >= '2000':
+                elif grams <= 2000:
                     print('you will pay:')
                     print('87.00')
+                elif grams > 2000:
+                    print('your package it too large for us to handle')
+            print()
+            print('input another amount, or type back.')
 
-    elif keyword == 'LAM':
-        print('"Largest And Smallest" number detector started')
+    elif keyword in ['Las', 'las']:
+        print()
+        print('L.A.S.   I N I T I A T E D')
+        print('feed this program any set of numbers and it will tell you which is the biggest and smallest number.')
+        print()
+        print('Input numbers')
         while True:
-            print('Input numbers')
+            numbers = input()
+            if numbers == 'back':
+                print()
+                print('Programs:')
+                print(programs, ' exit')
+                break
+            print()
+
+            numbers = numbers.split()
+            i = 0
+            while i < len(numbers):
+                numbers[i] = float(numbers[i])
+                i = i+1
+            small = numbers[0]
+            big = numbers[0]
+            i = 0
+            while i < len(numbers):
+                if numbers[i] < small:
+                    small = numbers[i]
+                if numbers[i] > big:
+                    big = numbers[i]
+                i = i+1
+            print('smallest', small)
+            print('biggest number', big)
+            print()
+            print('input another set of numbers, or type back')
