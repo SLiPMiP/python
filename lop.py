@@ -6,7 +6,11 @@ while True:
     print('type the title of the program youd like to start')
     keyword = input()
 
-    if keyword.lower() in ['countdown', 'count', '1']:
+    if keyword.lower() == 'exit':
+        print()
+        break
+
+    elif keyword.lower() in ['countdown', 'count', '1']:
         print()
         print('Self destruct initiated.')
         print('M E L T D O W N     E M I N E N T')
@@ -86,5 +90,8 @@ while True:
                         print(f'f({i}) = {i*3**2+6*i+9}')
                         oneLiner.append(f'f({i}) ={i*3**2+6*i+9}')
                         secondLiner = secondLiner+f'f({i}) = {i*3**2+6*i+9}, '
+                print()
                 # print(oneLiner)
                 print(secondLiner)
+                print()
+                print('input another amount or type back')
