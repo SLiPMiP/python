@@ -6,14 +6,17 @@ while True:
     print()
     print('input the title of the program youd like to use or type exit.')
 
+
     keyword = input()
 
     if keyword == 'exit':
         break
 
-    elif keyword in ['Conv', 'conv']:
+
+    elif keyword.lower() == 'conv':
         euro = 7.43
-        minFee = 0.02
+        komissionsRate = 0.02
+        minRate=0.5
         print()
         print('Conversion program started.')
         print('this is a program that converts DKK to EURO.')
@@ -24,9 +27,6 @@ while True:
         while True:
             dkk = input()
             if dkk == 'back':
-                print()
-                print('Programs:')
-                print(programs, ' exit')
                 break
             else:
                 print()
@@ -34,10 +34,15 @@ while True:
                 dkk = float(dkk)
                 print(dkk/euro, 'euro')
                 print('Conversion fee:')
-                if dkk/euro*minFee > 0.5:
-                    print(dkk/euro*minFee)
+                if dkk/euro*komissionsRate > minRate:
+                    print(dkk/euro*komissionsRate)
+                    print()
+                    print(f'youll get {dkk/euro-dkk/euro*komissionsRate} euro')
                 else:
                     print('0.5')
+                    print()
+                    print(f'youll get {dkk/euro-0.5}euro')
+
             print('input another amount to convert, or type back.')
 
     elif keyword in ['Porto', 'porto']:
@@ -50,9 +55,6 @@ while True:
             grams = input()
             print()
             if grams == 'back':
-                print()
-                print('Programs:')
-                print(programs, ' exit')
                 break
             else:
                 grams = float(grams)
@@ -79,9 +81,6 @@ while True:
         while True:
             numbers = input()
             if numbers == 'back':
-                print()
-                print('Programs:')
-                print(programs, ' exit')
                 break
             print()
 
