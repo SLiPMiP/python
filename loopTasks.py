@@ -83,15 +83,12 @@ while True:
                 break
             else:
                 x = int(x)
-                oneLiner = []
                 secondLiner = ''
                 for i in range(x+1):
                     if i > 0:
                         print(f'f({i}) = {i*3**2+6*i+9}')
-                        oneLiner.append(f'f({i}) ={i*3**2+6*i+9}')
                         secondLiner = secondLiner+f'f({i}) = {i*3**2+6*i+9}, '
                 print()
-                # print(oneLiner)
                 print(secondLiner)
                 print()
                 print('input another amount or type back')
