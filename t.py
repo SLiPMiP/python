@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-n=5
-
-
-h=[' '*int((n-x)/2)+'*'*x+'\n' for x in range(1,n+1,2)]
-
-
-print(h)
-=======
 import random
 
 guess = 0
@@ -46,4 +37,3 @@ while True:
                     hint = 'a smaller'
                 text2 = f'Im thinking of {hint} number. '
                 print(text.format(guess=guess), text2, '\n')
->>>>>>> 2b722379e8b0c11c8cde158149d4392810481c1c
